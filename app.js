@@ -19,15 +19,14 @@ if(fs.existsSync(SESSION_FILE_PATH)){
 
 
 
- const client = new Client({
-  authStrategy: new LocalAuth({ clientId: "Client-one"}),
+const client = new Client({
+  puppeteer: {
+    args: ['--no-sandbox']
+  },
+  authStrategy: new LocalAuth({ clientId: "Client-one" }),
   webVersionCache: {
     type: 'remote',
-    remotePath:  'https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2332.15.html',
-  
-  puppeteer: {
-		args: ['--no-sandbox'],
-}
+    remotePath: 'https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/2.2332.15.html'
   }
 });
 
