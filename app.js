@@ -127,7 +127,7 @@ client.initialize();
     case 0:
       if (message.body === '1') {
         // Preguntar por el número de documento
-        client.sendMessage(message.from, 'Por favor, indique el nombre de su empresa y el servicio que le interesa. \n \n Mensajeria masiva  \n \n Bot de WhatsApp \n \n Ventar por WhatsApp. ');
+        client.sendMessage(message.from, 'Por favor, indique el nombre de su empresa y el servicio que le interesa. \n \n Mensajeria masiva  \n \n Bot de WhatsApp \n \n Ventas por WhatsApp. ');
         registro[message.from].etapa = 1;
       }
       break;
